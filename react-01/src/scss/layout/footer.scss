@@ -1,0 +1,11 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+.footer {
+  padding: var(--footer-padding-top, 4rem) 0 var(--footer-padding-bottom, 6rem);
+  border-top: 1px solid #{$border-default};
+
+  @include lg {
+    --footer-padding-bottom: 80px;
+  }
+}

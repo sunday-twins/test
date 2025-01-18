@@ -1,0 +1,44 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+.page_sub {
+  padding: 8rem 0 10rem;
+}
+
+.article_banner {
+  position: relative;
+  margin-top: 5rem;
+  height: 25rem;
+
+  .text_bnr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font: {
+      size: 3rem
+    }
+
+    text-shadow: -5px -5px 15px white;
+  }
+}
+
+.list_info {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 30%);
+  margin-top: 5rem;
+
+  dt {
+    width: 30%;
+  }
+
+  dd {
+    width: 70%;
+  }
+}

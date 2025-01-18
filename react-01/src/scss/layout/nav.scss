@@ -7,14 +7,14 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: $z-nav;
   width: 100%;
   height: 100%;
   padding-top: var(--header-h);
   // background: rgba(255, 255, 255, 0.8);
   background: white;
   box-sizing: border-box;
-  animation: ani-nav_active 0.3s backwards;
-  transition: clip-path 0.3s;
+  animation: ani-nav_active 1s backwards ease-in-out;
 }
 
 .list_nav_main {
@@ -32,7 +32,7 @@
   padding: 10px 0;
 
   font: {
-    size: 1.4rem;
+    size: 1.6rem;
     weight: 700;
   }
 }
@@ -42,7 +42,7 @@
   padding: 5px 0;
 
   font: {
-    size: 1.4rem;
+    size: 1.6rem;
   }
 
   &:after {

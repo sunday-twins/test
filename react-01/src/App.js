@@ -1,5 +1,7 @@
 import './scss/common/reset.scss';
 import './scss/layout/layout.scss'
+import './scss/layout/main.scss'
+import './scss/layout/sub.scss'
 
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';

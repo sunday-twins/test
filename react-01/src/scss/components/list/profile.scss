@@ -1,0 +1,43 @@
+@import '../../common/variables';
+@import '../../common/mixins';
+
+.box_profile {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+  .img {
+    flex: 0 0 auto;
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+
+.box_thumb_profile {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #{$border-point};
+  border-radius: 2rem;
+}
+
+.list_img_name {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include xl {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

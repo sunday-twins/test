@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import '../scss/layout/header.scss';
 
 const Header = () => {

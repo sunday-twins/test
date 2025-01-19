@@ -3,6 +3,12 @@
 
 .page_sub {
   padding: 8rem 0 10rem;
+
+  .section {
+    &:not(:first-child) {
+      margin-top: 5rem;
+    }
+  }
 }
 
 .article_banner {

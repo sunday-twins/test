@@ -43,8 +43,10 @@ const Nav = () => {
                   <li key={subIdx} className="items_nav_sub">
                     <Link
                       to={subMenu.to}
-                      onClick={resetNav}
                       className="btn_nav_sub"
+                      onClick={() => {
+                        resetNav();
+                      }}
                     >
                       {subMenu.text}
                     </Link>
@@ -70,7 +72,9 @@ const BtnNavMain = ({ TagType = 'button', text, href }) => {
     <TagType
       {...(TagType === 'button' ? { type: 'button' } : { href })}
       className="btn_nav_main"
-      onClick={resetNav}
+      onClick={() => {
+        resetNav();
+      }}
     >
       {text}
     </TagType>

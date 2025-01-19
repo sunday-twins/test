@@ -1,0 +1,51 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+
+.box_common_btn {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.btn_common {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 5rem;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--border-color, #{$border-default});
+  border-radius: 1.2rem;
+  background: var(--bg-color, #fff);
+
+  &:disabled {
+    filter: grayscale(0.5);
+  }
+
+  &.type_point {
+    --border-color: #{$border-point};
+    --bg-color: #{$border-point};
+    color: $font-default-white;
+  }
+}
+
+
+.btn_download {
+  display: inline-flex;
+  align-items: center;
+  min-height: 5rem;
+  padding: 0 3rem;
+  border: 1px solid var(--border-color, #{$border-default});
+  border-radius: 1.2rem;
+  background: var(--bg-color, #fff);
+  transition: 0.3s;
+
+  &:hover {
+    --border-color: #000;
+    --bg-color: #000;
+    color: $font-default-white;
+  }
+
+
+}

@@ -62,6 +62,10 @@ button {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 input,

@@ -16,6 +16,7 @@ const Sub2 = () => {
 
       <section className="section">
         <div className="inner">
+          <h3>아코디언</h3>
           {SUB2_ACCORDION.map((d, index) => (
             <Accordion button={d.button} text={d.text} />
           ))}

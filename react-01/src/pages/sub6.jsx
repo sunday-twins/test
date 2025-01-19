@@ -1,7 +1,9 @@
 const Sub6 = () => {
   return (
     <section className="page_sub">
-      <h2>sub 6</h2>
+      <div className="inner">
+        <h2>sub 6</h2>
+      </div>
     </section>
   )
 };

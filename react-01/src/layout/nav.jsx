@@ -36,7 +36,7 @@ const Nav = () => {
         <ul className="list_nav_main">
           {['Menu 1', 'Menu 2', 'Menu 3'].map((mainMenu, mainIdx) => (
             <li key={mainIdx} className="items_nav_main">
-              <BtnNavMain text={mainMenu} />
+              <BtnNavMain text={mainMenu} attr={{ disabled: 'true' }} />
 
               <ul className="list_nav_sub">
                 {NAV_LIST_SUB[mainIdx].map((subMenu, subIdx) => (
@@ -57,7 +57,12 @@ const Nav = () => {
           ))}
 
           <li className="items_nav_main">
-            <BtnNavMain TagType="a" text="Menu 4" href="/f4" />
+            <BtnNavMain
+              TagType="a"
+              text="Menu 4"
+              href="/sub8"
+              attr={{ target: '_blank', title: "새 창 이동" }}
+            />
           </li>
         </ul>
       </div>
@@ -66,12 +71,13 @@ const Nav = () => {
 };
 
 // 메인 메뉴
-const BtnNavMain = ({ TagType = 'button', text, href }) => {
+const BtnNavMain = ({ TagType = 'button', text, href, attr }) => {
 
   return (
     <TagType
       {...(TagType === 'button' ? { type: 'button' } : { href })}
       className="btn_nav_main"
+      {...attr}
       onClick={() => {
         resetNav();
       }}

@@ -35,6 +35,14 @@
     size: 1.6rem;
     weight: 700;
   }
+
+  &:disabled {
+    font: {
+      style: italic;
+    }
+
+    color: inherit;
+  }
 }
 
 .btn_nav_sub {

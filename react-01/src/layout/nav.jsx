@@ -22,13 +22,7 @@ const NAV_LIST_SUB = [
 
 
 
-const btnNav = document.querySelector('.btn_nav');
-const resetNav = () => {
-  btnNav.classList.remove('is_active_nav');
-};
-
-
-const Nav = () => {
+const Nav = ({ resetNav }) => {
 
   return (
     <nav className="area_nav">
@@ -36,7 +30,13 @@ const Nav = () => {
         <ul className="list_nav_main">
           {['Menu 1', 'Menu 2', 'Menu 3'].map((mainMenu, mainIdx) => (
             <li key={mainIdx} className="items_nav_main">
-              <BtnNavMain text={mainMenu} attr={{ disabled: 'true' }} />
+              <button
+                type="button"
+                className="btn_nav_main"
+                onClick={resetNav}
+                disabled>
+                {mainMenu}
+              </button>
 
               <ul className="list_nav_sub">
                 {NAV_LIST_SUB[mainIdx].map((subMenu, subIdx) => (
@@ -44,9 +44,7 @@ const Nav = () => {
                     <Link
                       to={subMenu.to}
                       className="btn_nav_sub"
-                      onClick={() => {
-                        resetNav();
-                      }}
+                      onClick={resetNav}
                     >
                       {subMenu.text}
                     </Link>
@@ -57,33 +55,16 @@ const Nav = () => {
           ))}
 
           <li className="items_nav_main">
-            <BtnNavMain
-              TagType="a"
-              text="Menu 4"
-              href="/sub8"
-              attr={{ target: '_blank', title: "새 창 이동" }}
-            />
+            <Link
+              to="/sub8"
+              className="btn_nav_main"
+              onClick={resetNav}
+            >Menu 4
+            </Link>
           </li>
         </ul>
       </div>
     </nav>
-  );
-};
-
-// 메인 메뉴
-const BtnNavMain = ({ TagType = 'button', text, href, ...attr }) => {
-
-  return (
-    <TagType
-      {...(TagType === 'button' ? { type: 'button' } : { href })}
-      className="btn_nav_main"
-      {...attr}
-      onClick={() => {
-        resetNav();
-      }}
-    >
-      {text}
-    </TagType>
   );
 };
 

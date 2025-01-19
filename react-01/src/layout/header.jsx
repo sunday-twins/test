@@ -1,17 +1,7 @@
 import { useState } from 'react';
 import '../scss/layout/header.scss';
 
-const Header = () => {
-
-  const [isToggled, setIsToggled] = useState(false);
-
-  const handleClick = () => {
-    setIsToggled(!isToggled);
-  };
-
-  const resetNav = () => {
-    setIsToggled(false);
-  };
+const Header = ({ isActiveNav, toggleNav }) => {
 
   return (
     <header className="header">
@@ -20,16 +10,18 @@ const Header = () => {
           <a
             href="/"
             className="btn_logo"
-            onClick={resetNav}
           >home</a>
         </h1>
 
         <button
           type="button"
-          className={`btn_nav ${isToggled ? 'is_active_nav' : ''}`}
-          onClick={handleClick}
+          className={`btn_nav ${isActiveNav ? 'is_active_nav' : ''}`}
+          onClick={toggleNav}
         >
-          <span className="blind">menu</span>
+          <span className="blind">
+            {isActiveNav ? 'Close Menu' : 'Open Menu'}
+            menu
+          </span>
         </button>
       </div>
     </header>

@@ -1,0 +1,46 @@
+@mixin blind {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  opacity: 0;
+  color: transparent;
+}
+
+@mixin ellipsis($lines: 1) {
+  overflow: hidden;
+
+  @if $line >1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+  }
+
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+// $sm: 480px;
+$md: 768px;
+$lg: 940px;
+$xl: 1400px;
+
+@mixin md {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $xl) {
+    @content;
+  }
+}

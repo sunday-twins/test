@@ -1,0 +1,78 @@
+@import '../../common/variables';
+@import '../../common/mixins';
+
+.box_accordion {
+  transition: 0.3s;
+
+  &+.box_accordion {
+    border-top: 1px solid $border-default;
+  }
+}
+
+.btn_accordion {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+
+  font: {
+    size: 1.8rem;
+  }
+
+  text-align: left;
+  transform-origin: center;
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: calc(50%);
+    right: 1rem;
+    width: 2rem;
+    height: 0.2rem;
+    box-shadow: 0 1px 0 0 var(--border-color, #{$border-default});
+    content: '';
+  }
+
+  &:after {
+    transition: 0.3s;
+    transform: translate(-0.1rem, 0.1rem) rotate(-90deg);
+  }
+
+
+}
+
+// 아코디언 오픈
+.btn_accordion.is_open_accordion {
+  --border-color: #{$border-point};
+
+  &:after {
+    transform: rotate(0);
+  }
+
+  &~.item_accordion {
+    display: block;
+
+    .inner_accordion {
+      animation: ani-accordion_open 0.5s linear forwards;
+    }
+  }
+}
+
+.item_accordion {
+  display: none;
+
+  .inner_accordion {
+    padding: 1.5rem 1rem 1.5rem;
+  }
+}
+
+@keyframes ani-accordion_open {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}

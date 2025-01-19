@@ -1,0 +1,38 @@
+@import './mixins';
+
+// css 변수
+:root {
+  --padding: 2rem; // 공통여백
+  --content-w: 100%;
+  --header-h: 60px;
+
+  @include lg {
+    --padding: 3rem;
+    --content-w: 1000px; // 패딩포함
+  }
+
+  @include xl {
+    --padding: 4rem;
+    --header-h: 80px;
+    --content-w: 1240px;
+  }
+}
+
+// 글자색 
+$font-default-black: #000;
+$font-default-white: #fff;
+$font-point: #61dafb;
+$font-gray: #555;
+$font-light-gray: lightgray;
+
+// 배경
+$bg-dimmed: rgba(0, 0, 0, 0.6);
+
+// 선
+$border-default: #333;
+$border-point: #81e4ff;
+
+// z-index
+$z-nav: 9990;
+$z-header: 9991;
+$z-popup: 10000;

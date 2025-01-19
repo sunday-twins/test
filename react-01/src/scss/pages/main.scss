@@ -1,0 +1,16 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+.page_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 5rem;
+
+  font: {
+    size: 3rem;
+  }
+
+  box-sizing: border-box;
+}

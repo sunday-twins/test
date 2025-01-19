@@ -1,0 +1,15 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+body {
+  &:has(.is_active_nav) {
+    overflow: hidden;
+    transition: all 0.3s linear;
+  }
+}
+
+
+.container {
+  height: 100%;
+  padding-top: var(--header-h);
+}

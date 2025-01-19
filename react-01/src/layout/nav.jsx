@@ -71,7 +71,7 @@ const Nav = () => {
 };
 
 // 메인 메뉴
-const BtnNavMain = ({ TagType = 'button', text, href, attr }) => {
+const BtnNavMain = ({ TagType = 'button', text, href, ...attr }) => {
 
   return (
     <TagType

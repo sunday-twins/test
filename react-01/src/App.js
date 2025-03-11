@@ -36,7 +36,7 @@ function App() {
 
       <main className='container'>
         <Routes>
-          <Route path="/" exact element={<Main />} />
+          <Route path="/test" exact element={<Main />} />
           <Route path="/sub1" element={<Sub1 />} />
           <Route path="/sub2" element={<Sub2 />} />
           <Route path="/sub3" element={<Sub3 />} />

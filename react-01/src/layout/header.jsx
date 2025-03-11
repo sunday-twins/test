@@ -8,7 +8,7 @@ const Header = ({ isActiveNav, toggleNav }) => {
       <div className="inner">
         <h1 className="logo_header">
           <a
-            href="/"
+            href="/test"
             className="btn_logo"
           >home</a>
         </h1>

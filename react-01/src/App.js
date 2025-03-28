@@ -1,7 +1,7 @@
-import './scss/common/reset.scss';
-import './scss/layout/layout.scss'
-import './scss/pages/main.scss'
-import './scss/pages/sub.scss'
+// import './scss/common/reset.scss';
+// import './scss/layout/layout.scss'
+// import './scss/pages/main.scss'
+// import './scss/pages/sub.scss'
 
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';

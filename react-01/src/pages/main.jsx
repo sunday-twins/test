@@ -1,4 +1,4 @@
-import '../scss/pages/main.scss';
+// import '../scss/pages/main.scss';
 
 const Main = () => {
   return (

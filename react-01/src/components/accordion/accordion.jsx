@@ -1,4 +1,4 @@
-import '../../scss/components/accordion/accordion.scss'
+// import '../../scss/components/accordion/accordion.scss'
 
 import { useState } from 'react';
 

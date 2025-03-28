@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import '../scss/layout/header.scss';
+// import '../scss/layout/header.scss';
 
 const Header = ({ isActiveNav, toggleNav }) => {
 
   return (
-    <header className="header">
+    <header className="header border font-bold">
       <div className="inner">
         <h1 className="logo_header">
           <a

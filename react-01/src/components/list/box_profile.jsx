@@ -1,4 +1,4 @@
-import '../../scss/components/list/profile.scss'
+// import '../../scss/components/list/profile.scss'
 
 const BoxProfile = ({ src, name }) => {
   return (

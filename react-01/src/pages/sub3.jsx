@@ -1,4 +1,4 @@
-import '../scss/components/button.scss'
+// import '../scss/components/button.scss'
 import { SUB3_BUTTON } from "../mock/mock_sub3";
 
 const Sub3 = () => {

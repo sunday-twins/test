@@ -1,4 +1,4 @@
-// import './scss/common/reset.scss';
+import './scss/common/reset.scss';
 // import './scss/layout/layout.scss'
 // import './scss/pages/main.scss'
 // import './scss/pages/sub.scss'
@@ -34,7 +34,7 @@ function App() {
 
       <Layout.Nav resetNav={resetNav} />
 
-      <main className='container'>
+      <main className='container pt-20'>
         <Routes>
           <Route path="/test" exact element={<Main />} />
           <Route path="/sub1" element={<Sub1 />} />

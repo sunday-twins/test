@@ -1,11 +1,11 @@
 import { useState } from 'react';
-// import '../scss/layout/header.scss';
+import '../scss/layout/header.scss';
 
 const Header = ({ isActiveNav, toggleNav }) => {
 
   return (
-    <header className="header border font-bold">
-      <div className="inner">
+    <header className="header fixed top-0 left-0 w-full h-20 px-3 border-b bg-white">
+      <div className="flex justify-between items-center w-full h-full">
         <h1 className="logo_header">
           <a
             href="/test"
@@ -15,7 +15,7 @@ const Header = ({ isActiveNav, toggleNav }) => {
 
         <button
           type="button"
-          className={`btn_nav ${isActiveNav ? 'is_active_nav' : ''}`}
+          className={`btn_nav flex-none w-[2.5rem] h-[2.5rem]${isActiveNav ? ' is_active_nav' : ''}`}
           onClick={toggleNav}
         >
           <span className="blind">

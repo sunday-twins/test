@@ -25,14 +25,15 @@ const NAV_LIST_SUB = [
 const Nav = ({ resetNav }) => {
 
   return (
-    <nav className="area_nav">
+    <nav className="area_nav fixed top-0 left-0 w-full h-full pt-20 bg-white box-border">
+      {/* display: none => hidden */}
       <div className="inner">
-        <ul className="list_nav_main">
+        <ul className="list_nav_main grid gap-y-10 rid-cols-1 md:grid-cols-2 py-5">
           {['List', 'Table', 'Item'].map((mainMenu, mainIdx) => (
             <li key={mainIdx} className="items_nav_main">
               <button
                 type="button"
-                className="btn_nav_main"
+                className="btn_nav_main py-2 text-xs text-gray-400"
                 onClick={resetNav}
                 disabled>
                 {mainMenu}
@@ -43,7 +44,7 @@ const Nav = ({ resetNav }) => {
                   <li key={subIdx} className="items_nav_sub">
                     <Link
                       to={subMenu.to}
-                      className="btn_nav_sub"
+                      className="btn_nav_sub text-base text-black"
                       onClick={resetNav}
                     >
                       {subMenu.text}
